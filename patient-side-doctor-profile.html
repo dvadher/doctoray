@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <meta http-equiv="x-ua-compatible" content="IE=10">
+      <title>Doctory</title>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700" rel="stylesheet"
+         type="text/css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap_limitless.min.css">
+      <link rel="stylesheet" href="css/layout.min.css">
+      <link rel="stylesheet" href="css/components.min.css">
+      <link rel="stylesheet" href="css/all_plugin.css">
+      <link rel="stylesheet" href="css/font/fontawesome/styles.min.css">
+      <link rel="stylesheet" href="css/font/icomoon/styles.css">
+      <link rel="stylesheet" href="css/font/flaticons/flaticon.css">
+      <link href="css/font/fonts/fonts.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/doctoray-header.css">
+      <link rel="stylesheet" href="css/doctoray-custom.css">
+      <link rel="stylesheet" href="css/doctoray-responsive.css">
+      <link rel='stylesheet' href='css/owl.carousel.min.css'>
+      <link rel='stylesheet' href='css/owl.theme.default.min.css'>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/blockui.min.js"></script>
+      <script type="text/javascript" src="js/uniform.min.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+      <script type="text/javascript" src="js/jquery.ui.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+      <script type="text/javascript" src="js/validate.min.js"></script>
+      <script type="text/javascript" src="js/additional_methods.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap_multiselect.js"></script>
+      <script type="text/javascript" src="js/select2.min.js"></script>
+      <script type="text/javascript" src="js/navbar_multiple.js"></script>
+      <script type="text/javascript" src="js/navbar_multiple_sticky.js"></script>
+      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+      <script src='js/bootstrap-datepicker.js'></script>
+      <style>
+.tab-pane.show {
+    transform: translateX(0%);
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.tab-pane {
+    transform: translateX(200%);
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+ul.nav.nav-tabs.doctor-profile-tab {
+    border-bottom: 4px solid #fae8e9;
+    flex-wrap: nowrap;
+}
+ul.nav.nav-tabs.doctor-profile-tab li a {
+    color: #333;
+    font-weight: 500;
+}
+ul.nav.nav-tabs.doctor-profile-tab li {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+}
+ul.nav.nav-tabs.doctor-profile-tab li.active{
+    position: relative;
+}
+ul.nav.nav-tabs.doctor-profile-tab li.active:after{
+        content: "";
+    display: flex;
+    width: 100%;
+    height: 4px;
+    background: #cb2026;
+    position: absolute;
+    bottom: -4px;
+    z-index: 999999;
+    border: 1px solid #cb2026;
+    border-radius: 9px;
+}
+ul.nav.nav-tabs.doctor-profile-tab li a{
+    position: relative;
+}
+ul.nav.nav-tabs.doctor-profile-tab li a.active:after{
+    content: "";
+    display: flex;
+    width: 100%;
+    height: 4px;
+    background: #cb2026;
+    position: absolute;
+    bottom: -4px;
+    z-index: 999999;
+    border: 1px solid #cb2026;
+    border-radius: 9px;
+}
+.bg-time {
+    padding: 14px 30px;
+    color: #fff;
+}
+.bg-btn-transparent {
+    border: 1px solid #e1e1e1;
+    background: transparent !important;
+    color: #000 !important;
+}
+.t-left-arrow, .t-tight-arrow {
+    position: absolute;
+    top: -1px;
+}
+.t-left-arrow {
+    left: 0;
+}
+.t-tight-arrow {
+    right: 0;
+}
+.tab-arrow i:before {
+    font-size: 12px;
+}
+.tab-arrow i {
+    border: 1px solid #e1e1e1;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* doctor profile design slide into tab change */
+      </style>
+   </head>
+   <body id="body">
+      <!-- see arabik add class class="text-right"  dir="rtl" -->
+      <div class="main_page" id="page">
+         <!-- main menu -->
+         <header id="header" class="doc-header">
+            <div class="navbar navbar-expand-lg navbar-light navbar-sticky" id="doc-navbar">
+               <div class="container">
+                  <div class="navbar-brand">
+                     <a href="#" class="d-inline-block">
+                     <img src="images/Vector Smart Object.png" alt="logo">
+                     </a>
+                  </div>
+                  <div class="d-lg-none">
+                     <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar-navigation" aria-expanded="false">
+                     <img src="images/Menu.png">
+                     </button>
+                  </div>
+                  <div class="navbar-collapse collapse" id="navbar-navigation">
+                     <div class="d-lg-none d-lg-block jb_front_nav_close">
+                        <button type="button" class="navbar-toggler collapsed jb_front_nav_close">
+                        <i class="flaticon-close-1"></i>
+                        </button>
+                     </div>
+                     <ul class="center-menu d-inline-block mx-auto ml-auto non-tranparent nav navbar-nav ">
+                        <li class="nav-item float-left"><a href="#" class="navbar-nav-link jb_underline nav_post_job" data-toggle="modal" data-target="#modal-login">Home</a></li>
+                        <li class="nav-item float-left"><a href="#" class="navbar-nav-link jb_underline" data-toggle="modal" data-target="#modal-login">how its work </a></li>
+                        <li class="nav-item float-left"><a href="#" class="navbar-nav-link jb_underline">media center</a></li>
+                        <li class="nav-item float-left"><a href="#" class="navbar-nav-link jb_underline">contact us</a></li>
+                     </ul>
+                     <div class="float-right">
+                        <div class="main-menuright d-flex align-items-center">
+                           <ul class="navbar-nav notification">
+                              <li class="nav-item dropdown">
+                                 <a class="dropdown-toggle jb_company_dd_lang position-relative" href="#" role="button" data-toggle="dropdown">
+                                 </a>
+                                 <span class="tooltip-arrow navigation-tooltip"></span>
+                                 <div class="dropdown-menu dropdown-menu-right jb_company_dm_lang">
+                                    <h3>Notifications</h3>
+                                    <a href="#" class="dropdown-item d-block">
+                                       <strong class="d-block">Consultation Request Approved</strong>
+                                       <p>Your request has been approved, Click Here to complete your payment</p>
+                                    </a>
+                                    <a href="#" class="dropdown-item d-block">
+                                       <strong class="d-block">Consultation Request Approved</strong>
+                                       <p>Your request has been approved, Click Here to complete your payment</p>
+                                    </a>
+                                    <a href="#" class="dropdown-item d-block">
+                                       <strong class="d-block">Consultation Request Approved</strong>
+                                       <p>Your request has been approved, Click Here to complete your payment</p>
+                                    </a>
+                                    <h3 class="notification-footer"><a href="#" class="text-link">View All <i class="flaticon-next"></i></a></h3>
+                                 </div>
+                              </li>
+                           </ul>
+                           <div class="profile-dropdown d-flex justify-content-end align-items-center px-md-4 px-lg-4">
+                              <div class="profile-icon-menu">
+                                 <img src="images/profile-img.png">
+                              </div>
+                              <h6 class="text-blue m-0 pl-1">Omar Abbs</h6>
+                              <ul class="navbar-nav">
+                                 <li class="nav-item dropdown">
+                                    <a class="dropdown-toggle jb_company_dd_lang d-inline-block position-relative  m-0 p-0" href="#" role="button" data-toggle="dropdown">
+                                    </a>
+                                    <span class="tooltip-arrow navigation-tooltip"></span>
+                                    <div class="dropdown-menu dropdown-menu-right jb_company_dm_lang">
+                                       <a href="#" class="dropdown-item ">Edit Profile</a>
+                                       <a href="#" class="dropdown-item ">Account Settings</a>
+                                       <a href="#" class="dropdown-item ">Payment History</a>
+                                       <a href="#" class="dropdown-item ">Logout</a>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                           <ul class="navbar-nav language">
+                              <li class="nav-item">
+                                 <a class="lan-en" href="#">
+                                 english  
+                                 </a>
+                                 <a class="lan-ar"  href="#">
+                                 عربي
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- main menu -->
+         <div class="page-content">
+            <div class="content-wrapper">
+               <!-- doctor notes -->
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="back-page-band py-4">
+                              <a  href="#" class="font-semi-bold text-black"><i class="flaticon-left-arrow-key pr-2"></i>Back to Search Page</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="breadcrumbs p-3 py-lg-3 font-white">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-md-8 col-12">
+                           <div class="row">
+                              <div class="breadcrumbs-img d-flex align-items-center py-0 py-md-3 py-lg-3 py-md-0">
+                                 <div class="company-profile-bg-logo border-rounded1">
+                                    <img src="images/user-two.png" class="profile-img d-block position-relative">
+                                 </div>
+                              </div>
+                              <div class="col-lg-8 col-12 py-3 ml-0 ml-md-0 ml-lg-4">
+                                 <div class="row">
+                                    <div class="heading-detail d-block d-md-flex d-lg-flex align-items-center">
+                                       <h3 class="font-bold text-white p-0 m-0">Dr. Khalil Alshowaiker</h3>
+                                       <i class="flaticon-heart pl-0 pl-md-2 pl-lg-2"></i>
+                                       <i class="flaticon-time pl-0 pl-md-2 pl-lg-2"></i>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <p class="p-0 m-0 pb-2">Internal meddicine, Pulmonology</p>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-3 p-0">
+                                       <h5 class="doc_label_after font-semi-bold mb-0">Country</h5>
+                                    </div>
+                                    <div class="col-md-9  my-0 my-0 p-0">
+                                       <p class="font-semi-medium">Kuwait</p>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-3 p-0">
+                                       <h5 class="doc_label_after font-semi-bold mb-0">Languages</h5>
+                                    </div>
+                                    <div class="col-md-9  my-0 my-0 p-0">
+                                       <p class="font-semi-medium m-0">English, Arabic  </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-4 p-0 btn-right">
+                           <!-- <div class="right-content float-right">
+                              <a href="#" class="btn btn-sub blue-btn d-flex align-items-center position-relative font-semi-bold text-white profile-submit mr-2 border-white">Ask Now
+                              <i class="flaticon-next position-absolute"></i></a>
+                           </div> -->
+                           <div class="right-content p-0 m-0 pt-md-3 pt-lg-3 mb-4 mt-1 mb-md-0 mb-lg-0">
+                                 <a href="#" class="doc-btn border-white font-semi-bold mr-2 float-right">Ask Now
+                                 <i class="flaticon-next position-absolute"></i></a>
+                              </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="profile-body Prescription section-spacer">
+                  <div class="container">
+                     <div class="detail-box pb-2">
+                           <div class="row mb-3 mb-md-3 mb-lg-4">
+                                 <div class="col-md-3 pb-0">
+                                    <h5 class="doc_label_after font-semi-bold m-0">Education & Qualifications</h5>
+                                 </div>
+                                 <div class="col-md-9">
+                                    <p class="font-semi-medium m-0">Kuwait</p>
+                                 </div>
+                              </div>
+                              <div class="row mb-3 mb-md-3 mb-lg-4">
+                                 <div class="col-md-3 pb-0">
+                                    <h5 class="doc_label_after font-semi-bold m-0">Expertise & Services</h5>
+                                 </div>
+                                 <div class="col-md-9">
+                                    <p class="font-semi-medium m-0">Specialist Physician<br>
+                                       Obesity and weight disorder specialist
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row mb-3 mb-md-3 mb-lg-4">
+                                 <div class="col-md-3 pb-0">
+                                    <h5 class="doc_label_after font-semi-bold m-0">Mode Of Communication</h5>
+                                 </div>
+                                 <div class="col-md-9">
+                                    <p class="font-semi-medium m-0">
+                                       <i class="flaticon-comment pl-0"></i>
+                                       <i class="flaticon-video-call pl-2"></i>
+                                       <i class="flaticon-phone-4 pl-2"></i>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="row mb-3 mb-md-3 mb-lg-4">
+                                 <div class="col-md-3 pb-0">
+                                    <h5 class="doc_label_after font-semi-bold m-0">Consultation Duration</h5>
+                                 </div>
+                                 <div class="col-md-9">
+                                    <p class="font-semi-medium m-0">Upto 10 Min</p>
+                                 </div>
+                              </div>
+                              <div class="row mb-3 mb-md-3 mb-lg-4">
+                                 <div class="col-md-3 pb-0">
+                                    <h5 class="doc_label_after font-semi-bold m-0">Consultation Fees</h5>
+                                 </div>
+                                 <div class="col-md-9">
+                                    <p class="font-semi-medium m-0">10 KWD</p>
+                                 </div>
+                              </div>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <hr>
+                  </div>
+
+                  <div class="tab-slide">
+                     <div class="container">
+                         <div class="tab-slide-innercontent">
+                             <div class="tab-heading">
+                                 <p class="font-semi-bold text-center pb-1">Select a time slot to book an appointment</p>
+                             </div>
+                             <div class="tab-list-header position-relative px-5">
+                                 <ul class="nav nav-tabs doctor-profile-tab d-flex justify-content-center">
+                                     <li class="text-center"><a class="pb-3 d-block" data-toggle="tab" href="#home">Fri 2 Aug</a></li>
+                                     <li class="text-center"><a class="pb-3 d-block" data-toggle="tab" href="#menu1">Sat 3 Aug</a></li>
+                                     <li class="text-center"><a class="pb-3 d-block" data-toggle="tab" href="#menu2">Sun 4 Aug</a></li>
+                                     <li class="text-center"><a class="pb-3 d-block" data-toggle="tab" href="#menu3">Mon 5 Aug</a></li>
+                                     <li class="text-center"><a class="pb-3 d-block" data-toggle="tab" href="#menu4">Tue 6 Aug</a></li>
+                                     <li class="text-center"><a class="pb-3 d-block" data-toggle="tab" href="#menu5">Wed 7 Aug</a></li>
+                                 </ul>
+                                 <div class="tab-arrow">
+                                     <div class="t-left-arrow">
+                                         <i class="flaticon-arrow text-black"></i>
+                                     </div>
+                                     <div class="t-tight-arrow">
+                                         <i class="flaticon-arrow-1 text-black"></i>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="tab-content px-3 px-md-4 px-lg-5">
+                                 <div id="home" class="tab-pane in active">
+                                     <div class="row mt-4">
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM1111</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM222</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM333</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM44</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM555</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-transparent border-radius font-semi-medium bg-time bg-btn-transparent border-1 mb-2">12:30 AM666</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="menu1" class="tab-pane">
+                                     <div class="row mt-4">
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM7</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM8</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM9</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM10</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM11</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-transparent border-radius font-semi-medium bg-time bg-btn-transparent border-1 mb-2">12:30 AM12</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="menu2" class="tab-pane">
+                                     <div class="row mt-4">
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM13</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM14</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM15</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM16</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM17</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-transparent border-radius font-semi-medium bg-time bg-btn-transparent border-1 mb-2">12:30 AM18</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="menu3" class="tab-pane">
+                                     <div class="row mt-4">
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-transparent border-radius font-semi-medium bg-time bg-btn-transparent border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="menu4" class="tab-pane">
+                                     <div class="row mt-4">
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-transparent border-radius font-semi-medium bg-time bg-btn-transparent border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div id="menu5" class="tab-pane">
+                                     <div class="row mt-4">
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium bg-time border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                         <div class="col-4 col-md-2">
+                                             <a href="#" class="text-btn d-inline-block bg-transparent border-radius font-semi-medium bg-time bg-btn-transparent border-1 mb-2">12:30 AM</a>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+
+
+
+
+                  <div class="sync-slide pt-3">
+                     <div class="container">
+                        <p class="sync-heading font-semi-bold text-center pb-1">Select a time slot to book an appointment
+                        </p>
+                        <div class="sync-one">
+                           <div id="sync2" class="owl-carousel owl-theme doctoray-sync px-5">
+                              <div class="item pb-3">
+                                 <p class="font-semi-medium text-center m-0">Fri 2 Aug</p>
+                              </div>
+                              <div class="item pb-3">
+                                 <p class="font-semi-medium text-center m-0">Sat 3 Aug</p>
+                              </div>
+                              <div class="item pb-3">
+                                 <p class="font-semi-medium text-center m-0">Sun 4 Aug</p>
+                              </div>
+                              <div class="item pb-3">
+                                 <p class="font-semi-medium text-center m-0">Mon 5 Aug</p>
+                              </div>
+                              <div class="item pb-3">
+                                 <p class="font-semi-medium text-center m-0">Tue 6 Aug</p>
+                              </div>
+                              <div class="item pb-3">
+                                 <p class="font-semi-medium text-center m-0">Wed 7 Aug</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div id="sync1" class="owl-carousel owl-theme px-5">
+                           <div class="item">
+                              <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 AM</a></span>
+                              <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 PM</a></span>
+                              <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">4:30 PM</a></span>
+                              <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">6:30 PM</a></span>
+                              <span class="mx-2"><a href="#" class="text-btn d-inline-block  border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2 bg-transparent text-black border-1">12:30 PM</a></span>
+                           </div>
+                           <div class="item">
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 AM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">4:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">6:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block  border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2 bg-transparent text-black border-1">12:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 AM</a></span>
+                              <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 PM</a></span>
+                              <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">4:30 PM</a></span>
+                              <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">6:30 PM</a></span>
+                              <span class="mx-2"><a href="#" class="text-btn d-inline-block  border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2 bg-transparent text-black border-1">12:30 PM</a></span>
+                           </div>
+                           <div class="item">
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 AM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">4:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">6:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block  border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2 bg-transparent text-black border-1">12:30 PM</a></span>
+                           </div>
+                           <div class="item">
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 AM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">4:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">6:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block  border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2 bg-transparent text-black border-1">12:30 PM</a></span>
+                           </div>
+                           <div class="item">
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 AM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">4:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">6:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block  border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2 bg-transparent text-black border-1">12:30 PM</a></span>
+                           </div>
+                           <div class="item">
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 AM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">12:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">4:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block bg-color-blue border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2">6:30 PM</a></span>
+                                 <span class="mx-2"><a href="#" class="text-btn d-inline-block  border-radius font-semi-medium px-4 py-2 text-black border-1 mb-2 bg-transparent text-black border-1">12:30 PM</a></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- doctor notes -->
+            </div>
+         </div>
+         <!-- footer section -->
+         <div class="footer bg-color-blue text-white">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-7">
+                     <ul class="footer-menu d-inline-block pb-3 w-100">
+                        <li><a class="text-white text-capitalize font-light" href="#">About us</a></li>
+                        <li><a class="text-white text-capitalize font-light" href="#">blog</a></li>
+                        <li><a class="text-white text-capitalize font-light" href="#">FAQS</a></li>
+                        <li><a class="text-white text-capitalize font-light" href="#">Rules & Regulations</a></li>
+                        <li><a class="text-white text-capitalize font-light"href="#">Careers</a></li>
+                        <li><a class="text-white text-capitalize font-light" href="#">Sitemap </a></li>
+                     </ul>
+                     <div class="social-media mx-auto d-inline-block">
+                        <ul class="social-media">
+                           <li><a class="text-white" href="#"><i class="flaticon-logo-1 d-inline-block"></i></a></li>
+                           <li><a class="text-white" href="#"><i class="flaticon-twitter d-inline-block"></i></a></li>
+                           <li><a class="text-white" href="#"><i class="flaticon-linkedin  d-inline-block"></i></a></li>
+                           <li><a class="text-white" href="#"><i class="flaticon-google-plus d-inline-block"></i></a></li>
+                           <li><a class="text-white" href="#"><i class="flaticon-logo d-inline-block"></i></a></li>
+                           <li><a class="text-white" href="#"><i class="flaticon-snapchat d-inline-block"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-5">
+                     <div class="inline-div d-flex justify-content-end">
+                        <a  href="#"><img src="images/app-store.png"></a>
+                        <a href="#">
+                        <img src="images/google-play.png">
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright text-center">
+               <div class="d-md-flex d-lg-flex justify-content-center align-items-center float-none">
+                  <p class="pr-2 text-white text-capitalize font-light m-0">Copyright 2019 Consults Online. All Rights Reserved.</p>
+                  <ul class="copyright-menu">
+                     <li><a class="text-white text-capitalize font-light" href="#">Privacy Policy</a></li>
+                     <li><a class="text-white text-capitalize font-light" href="#">Terms & Coditions</a></li>
+                  </ul>
+                  </ul>
+               </div>
+               <ul>
+            </div>
+         </div>
+         <!-- footer section -->
+      </div>
+      <!-- end main page -->
+      <script type="text/javascript" src="js/doctoray-custom.js"></script>
+   </body>
+</html>

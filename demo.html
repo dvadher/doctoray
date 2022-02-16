@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+      <style>
+         .footer.bg-color-blue.text-white {
+            padding: 10px;
+   }
+      </style>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <meta http-equiv="x-ua-compatible" content="IE=10">
+      <title>Doctory</title>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700" rel="stylesheet"
+         type="text/css">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/bootstrap_limitless.min.css">
+      <link rel="stylesheet" href="css/layout.min.css">
+      <link rel="stylesheet" href="css/doctoray-header.css">
+      <!-- <link rel="stylesheet" href="css/doctoray-custom.css"> -->
+      <!-- <link rel="stylesheet" href="css/doctoray-responsive.css"> -->
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+   </head>
+   <body id="body">
+      <!-- see arabik add class class="text-right"  dir="rtl" -->
+      <div class="main_page" id="page">
+            <header id="header" class="doc-header">
+                  <div class="navbar navbar-expand-lg navbar-light navbar-sticky" id="doc-navbar">
+                     <div class="container">
+                        <div class="navbar-brand">
+                           <a href="#" class="d-inline-block">
+                           <img src="images/Vector Smart Object.png" alt="logo">
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+            </header>
+         <!-- doctor notes -->
+         <div class="page-content">
+            <div class="content-wrapper">
+            xdsfvbgdjfgh
+            </div>
+         </div>
+         <!-- doctor notes -->  
+         <!-- footer section -->
+         <div class="footer bg-color-blue text-white">
+            <div class="copyright text-center">
+               <div class="d-md-flex d-lg-flex justify-content-center align-items-center float-none">
+                  <p class="pr-2 text-white text-capitalize font-light m-0">Copyright 2019 Consults Online. All Rights Reserved.</p>
+                  <ul class="copyright-menu">
+                     <li><a class="text-white text-capitalize font-light" href="#">Privacy Policy</a></li>
+                     <li><a class="text-white text-capitalize font-light" href="#">Terms & Coditions</a></li>
+                  </ul>
+                  </ul>
+               </div>
+               <ul>
+            </div>
+         </div>
+         <!-- footer section -->
+      </div>
+      <!-- end main page -->
+      <script type="text/javascript" src="js/doctoray-custom.js"></script>
+      <script>
+          var min_height = $(window).height() - ($("#header").height() + $(".footer").height());
+    $(".page-content").css('min-height',min_height+'px');
+    $(window).scroll(function(){
+        var navHeight = $('#header').height();
+        if ($(window).scrollTop() >= 0) {
+            $('#header').addClass("sticky")
+            $('#body').css('padding-top',navHeight+"px");
+        } else {
+            $('#header').removeClass("sticky")
+            $('#body').css('padding-top',0);
+        }
+    });
+      </script>
+   </body>
+</html>
